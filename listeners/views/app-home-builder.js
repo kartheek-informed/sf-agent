@@ -11,7 +11,7 @@ export function buildAppHomeView(installUrl = null, isConnected = false) {
       type: 'header',
       text: {
         type: 'plain_text',
-        text: "Hey there :wave: I'm your Slack assistant.",
+        text: 'Hello! :wave:',
       },
     },
     {
@@ -19,7 +19,8 @@ export function buildAppHomeView(installUrl = null, isConnected = false) {
       text: {
         type: 'mrkdwn',
         text:
-          "I'm here to help! You can ask me questions, have a conversation, " +
+          "Hello there! I'm your Slack assistant and I'm happy to meet you. " +
+          "I'm here to help — ask me questions, have a conversation, " +
           'or ask me to do things in Slack.\n\n' +
           'Send me a *direct message* or *mention me in a channel* to get started.',
       },
