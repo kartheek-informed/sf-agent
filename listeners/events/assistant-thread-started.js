@@ -1,4 +1,5 @@
 const SUGGESTED_PROMPTS = [
+  { title: 'Say Hello', message: 'Hello! What can you do?' },
   { title: 'Write a Message', message: 'Help me draft a message to my team' },
   { title: 'Summarize', message: 'Can you help me summarize something?' },
   { title: 'Brainstorm', message: 'I need help brainstorming ideas' },
