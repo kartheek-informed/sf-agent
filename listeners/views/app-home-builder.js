@@ -11,7 +11,7 @@ export function buildAppHomeView(installUrl = null, isConnected = false) {
       type: 'header',
       text: {
         type: 'plain_text',
-        text: "Hey there :wave: I'm your Slack assistant.",
+        text: "Hey there :wave: I'm your Salesforce assistant.",
       },
     },
     {
@@ -19,9 +19,17 @@ export function buildAppHomeView(installUrl = null, isConnected = false) {
       text: {
         type: 'mrkdwn',
         text:
-          "I'm here to help! You can ask me questions, have a conversation, " +
-          'or ask me to do things in Slack.\n\n' +
-          'Send me a *direct message* or *mention me in a channel* to get started.',
+          "I can query your Salesforce org in real time and answer questions about opportunities, " +
+          'accounts, pipeline, and more.\n\n' +
+          '*How to use me:*\n' +
+          '\u2022 Send me a *direct message* to ask a question\n' +
+          '\u2022 *Mention me in a channel* with `@salesforce-agent` and your question\n\n' +
+          '*Things I can do:*\n' +
+          '\u2022 Show open pipeline and opportunity details\n' +
+          '\u2022 Count accounts, opportunities, or other records\n' +
+          '\u2022 Find deals closing this month/quarter\n' +
+          '\u2022 Look up opportunities by owner, stage, or amount\n' +
+          '\u2022 Summarize recently closed-won deals',
       },
     },
     { type: 'divider' },

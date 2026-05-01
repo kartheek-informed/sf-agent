@@ -1,7 +1,8 @@
 const SUGGESTED_PROMPTS = [
-  { title: 'Write a Message', message: 'Help me draft a message to my team' },
-  { title: 'Summarize', message: 'Can you help me summarize something?' },
-  { title: 'Brainstorm', message: 'I need help brainstorming ideas' },
+  { title: 'Open Pipeline', message: 'What does our open pipeline look like right now?' },
+  { title: 'Closing This Month', message: 'Which opportunities are closing this month?' },
+  { title: 'Account Count', message: 'How many accounts do we have in Salesforce?' },
+  { title: 'Top Deals', message: 'Show me the top 10 open opportunities by amount' },
 ];
 
 /**
@@ -16,7 +17,7 @@ export async function handleAssistantThreadStarted({ client, event, logger }) {
     await client.assistant.threads.setSuggestedPrompts({
       channel_id: channelId,
       thread_ts: threadTs,
-      title: 'How can I help you today?',
+      title: 'Ask me anything about your Salesforce data',
       prompts: SUGGESTED_PROMPTS,
     });
   } catch (e) {
