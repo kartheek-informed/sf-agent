@@ -43,13 +43,16 @@ async function addReaction(deps) {
  */
 function buildPrompt(text, userId) {
   return [
-    `Slack user <@${userId}> asks:`,
+    'You are responding DIRECTLY to a Slack user. Your response text will be posted',
+    'as a Slack message automatically — do NOT wrap it in a draft, do NOT say',
+    '"here\'s a Slack-ready reply", do NOT address yourself in third person.',
+    'Just respond naturally and concisely as if you are chatting with the user.',
     '',
-    text,
-    '',
-    'Respond following the instructions in .cursor/rules/salesforce-agent.md.',
-    'If the user asks about Salesforce opportunities or pipeline data,',
+    'Follow the instructions in .cursor/rules/salesforce-agent.md.',
+    'If the user asks about Salesforce data,',
     'run `node scripts/sf-query.js "<SOQL>"` to fetch live data and summarize it.',
+    '',
+    `User <@${userId}> says: ${text}`,
   ].join('\n');
 }
 
